@@ -1,0 +1,62 @@
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+        table, th, td {
+            border: 1px solid black;
+        }
+        </style>
+<script>
+    function add(){
+        var textInput1 = document.getElementById("ชื่อลูกค้า");
+        var textInput2 = document.getElementById("ที่อยู่");
+        var textInput3 = document.getElementById("โทรศัพท์");
+
+        var song1 = textInput1.value;
+        var song2 = textInput2.value;
+        var song3 = textInput3.value;
+
+        var t1 = document.createElement("td");
+        t1.innerHTML = song1 ;
+        var t2 = document.createElement("td");
+        t2.innerHTML = song2 ;
+        var t3 = document.createElement("td");
+        t3.innerHTML = song3 ;
+
+        var table = document.getElementById("text");
+        var tr = document.getElementById("g");
+        table.appendChild(tr);
+        table.appendChild(t1);
+        table.appendChild(t2);
+        table.appendChild(t3);
+
+    }
+
+</script>
+</head>
+<body>
+<form>
+ชื่อลูกค้า
+<input type="text" id="ชื่อลูกค้า">
+<br>
+ที่อยู่
+<input type="text" id="ที่อยู่">
+<br>
+โทรศัพท์
+<input type="text" id="โทรศัพท์">
+<br>
+<input type="button" id="addButton" value="เพื่ม" onclick="add()">
+</form>
+<table id= "text">
+        <tr>
+          <th>สินค้า</th>
+          <th>จังหวัด</th>
+          <th>ยอดขาย</th>
+        </tr>
+        <tr id="g" >
+        </tr>
+        
+      </table>
+
+</body>
+</html>
